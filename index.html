@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lavora con noi | Impresa Bacchi</title>
+<meta name="description" content="Entra nel team di Impresa Bacchi: posizioni aperte a Carpiano (MI) per contabilità lavori, QHSE e laboratorio materiali stradali.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#AB062D;
+  --crimson:#E20746;
+  --slate:#26333D;
+  --slate-dark:#1c262e;
+  --light:#EFEFEF;
+  --text:#333333;
+  --muted:#4a545d;
+  --line:#dfe3e7;
+  --pad:20px;
+  --max:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:'Schibsted Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--text);background:#fff;line-height:1.5;overflow-x:hidden}
+img,svg{max-width:100%}
+a{color:inherit}
+h1,h2,h3,h4,p,ul{margin:0}
+ul{padding:0;list-style:none}
+:focus-visible{outline:3px solid var(--crimson);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;font:600 16px/1 inherit;font-family:inherit;text-decoration:none;cursor:pointer;border:2px solid transparent;transition:opacity .15s}
+.btn:hover{opacity:.88}
+.btn-red{background:var(--red);color:#fff;border-color:var(--red)}
+.btn-red-on-dark{background:var(--red);color:#fff;border-color:#fff}
+.btn-ghost-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
+.btn-ghost-dark{background:#fff;color:var(--slate);border-color:var(--slate)}
+.btn-block{width:100%}
+
+/* Eyebrow */
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:15px;font-weight:600;color:var(--red)}
+.eyebrow::before{content:"";width:36px;height:3px;background:currentColor;display:inline-block}
+.on-dark .eyebrow{color:#fff}
+.on-dark .eyebrow::before{background:var(--crimson)}
+.h2{font-size:clamp(30px,6.4vw,48px);line-height:1.1;font-weight:700;letter-spacing:-.03em;margin-top:16px}
+
+/* Hero */
+.hero{position:relative;background:var(--slate);color:var(--light);overflow:hidden}
+.hero::before{content:"";position:absolute;right:-220px;top:220px;width:480px;height:480px;border-radius:50%;background:var(--red);opacity:.92}
+.hero::after{content:"";position:absolute;right:-160px;bottom:-260px;width:420px;height:420px;border-radius:50%;background:var(--crimson);opacity:.5}
+.hero .wrap{position:relative;z-index:1;padding-top:18px;padding-bottom:56px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font-size:22px;font-weight:700;letter-spacing:-.02em}
+.brand-mark{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border:3px solid var(--red);background:#fff;color:var(--red);font-weight:800;font-size:16px;border-radius:12px}
+.menu-btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:999px;border:1px solid rgba(255,255,255,.5);background:rgba(255,255,255,.12);color:#fff;font:600 15px/1 inherit;font-family:inherit;cursor:pointer}
+.menu-btn svg{width:18px;height:18px}
+.nav{display:none;margin-top:14px;padding:8px;border-radius:24px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22)}
+.nav.open{display:block}
+.nav a{display:block;padding:14px 16px;border-radius:14px;font-size:17px;text-decoration:none}
+.nav a[aria-current="page"]{background:#fff;color:var(--slate);font-weight:600}
+.hero-body{padding-top:48px}
+.hero-kicker{font-size:17px;color:#C9D1D8}
+.hero h1{margin-top:14px;font-size:clamp(38px,10.5vw,72px);line-height:1.04;font-weight:700;letter-spacing:-.04em;color:#fff}
+.hero-lead{margin-top:20px;font-size:18px;line-height:1.55;color:#E3E8EC;max-width:540px}
+.hero-cta{display:flex;flex-direction:column;gap:12px;margin-top:28px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,.22)}
+.stat b{display:block;font-size:24px;font-weight:700;color:#fff;line-height:1.1}
+.stat span{display:block;font-size:13px;color:#C9D1D8;margin-top:4px}
+.ph{position:relative;overflow:hidden;background:repeating-linear-gradient(135deg,#3a4a57 0 14px,#33424e 14px 28px);border:1px solid rgba(255,255,255,.2)}
+.ph small{position:absolute;left:14px;right:14px;bottom:14px;padding:9px 12px;border-radius:10px;background:rgba(38,51,61,.88);font-size:12.5px;color:#fff}
+.hero-visual{margin-top:40px;height:300px;border-radius:150px 24px 24px 24px}
+
+/* Sections */
+section{position:relative}
+.sec{padding-top:72px;padding-bottom:72px}
+
+/* Chi siamo */
+.about-grid{display:grid;gap:28px}
+.about-lead{font-size:19px;line-height:1.6}
+.about-more{font-size:16.5px;line-height:1.65;color:var(--muted);margin-top:16px}
+.certs-box{margin-top:48px;padding:22px;border-radius:24px;background:var(--light)}
+.certs-box h3{font-size:15px;font-weight:600;color:var(--slate);margin-bottom:16px}
+.certs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cert{padding:14px;border-radius:14px;background:#fff;border:1px solid var(--line)}
+.cert b{display:block;font-size:15px;font-weight:700;color:var(--red)}
+.cert span{display:block;font-size:13.5px;color:var(--muted);margin-top:3px}
+
+/* Offerta */
+.offer{background:var(--slate);color:var(--light);overflow:hidden}
+.offer::before{content:"";position:absolute;left:-200px;top:-200px;width:420px;height:420px;border-radius:50%;background:var(--red);opacity:.35}
+.offer .wrap{position:relative}
+.offer .h2{color:#fff;max-width:760px}
+.cards{display:grid;gap:14px;margin-top:36px}
+.card{padding:24px;border-radius:22px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18)}
+.card svg{width:30px;height:30px;stroke:#fff;fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:20px;font-weight:700;color:#fff;margin:14px 0 6px}
+.card p{font-size:15.5px;line-height:1.55;color:#D5DCE2}
+
+/* Posizioni */
+.jobs{background:var(--light)}
+.jobs-head{display:flex;flex-direction:column;gap:12px}
+.jobs-count{font-size:16px;color:var(--muted)}
+.job-list{display:flex;flex-direction:column;gap:14px;margin-top:32px}
+.job{border-radius:22px;background:#fff;border:1px solid var(--line);overflow:hidden}
+.job-top{padding:22px}
+.tag{display:inline-block;padding:5px 12px;border-radius:999px;background:var(--light);font-size:13px;font-weight:600;color:var(--red)}
+.job h3{margin-top:12px;font-size:23px;line-height:1.2;font-weight:700;letter-spacing:-.02em;color:var(--slate)}
+.job-sum{margin-top:8px;font-size:15.5px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{padding:6px 12px;border-radius:999px;border:1px solid #c8ced4;font-size:13.5px}
+.job-actions{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.job details{border-top:1px solid #e6e9ec}
+.job summary{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px;padding:0 22px;cursor:pointer;font-weight:600;color:var(--slate);list-style:none}
+.job summary::-webkit-details-marker{display:none}
+.job summary svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.25;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.job details[open] summary svg{transform:rotate(180deg)}
+.job .lbl-close{display:none}
+.job details[open] .lbl-open{display:none}
+.job details[open] .lbl-close{display:inline}
+.job-detail{padding:4px 22px 26px;display:grid;gap:26px}
+.job-detail h4{font-size:16px;font-weight:700;color:var(--slate);margin-bottom:12px}
+.bul li{display:flex;gap:12px;font-size:15px;line-height:1.5;margin-bottom:9px}
+.bul li::before{content:"";flex:0 0 8px;height:8px;margin-top:7px;border-radius:50%;background:var(--red)}
+.bul.dark li::before{background:var(--slate)}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{padding:7px 12px;border-radius:999px;background:var(--light);font-size:14px}
+.note{margin-top:16px;padding:14px 16px;border-radius:14px;background:var(--slate);color:#fff;font-size:15px}
+.legal{margin-top:24px;font-size:13.5px;line-height:1.55;color:var(--muted)}
+
+/* Contatti */
+.contact{background:var(--slate);color:var(--light);overflow:hidden}
+.contact::before{content:"";position:absolute;right:-220px;top:-180px;width:460px;height:460px;border-radius:50%;background:var(--red);opacity:.45}
+.contact .wrap{position:relative}
+.contact-grid{display:grid;gap:36px}
+.contact .h2{color:#fff}
+.contact-lead{margin-top:18px;font-size:17px;line-height:1.6;color:#E3E8EC}
+.contact-addr{margin-top:26px;padding-top:20px;border-top:1px solid rgba(255,255,255,.22);font-size:16px;color:#E3E8EC}
+.contact-addr b{display:block;color:#fff}
+.form-card{padding:24px;border-radius:24px;background:#fff;color:var(--text)}
+.row{display:grid;gap:18px}
+.field{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
+.field label,.field .lab{font-size:15px;font-weight:600;color:var(--slate)}
+.field input[type=text],.field input[type=email],.field input[type=tel],.field select,.field textarea,.field input[type=file]{width:100%;font:16px/1.4 inherit;font-family:inherit;color:var(--text);background:#fff;border:1.5px solid #8b959e;border-radius:14px;padding:0 16px}
+.field input[type=text],.field input[type=email],.field input[type=tel],.field select{height:52px}
+.field textarea{padding:14px 16px;resize:vertical}
+.field input[type=file]{padding:12px 14px;border-style:dashed;background:#F6F7F8;font-size:15px}
+.field input:invalid:not(:placeholder-shown):not(:focus),.field select:invalid:not(:focus):not([data-pristine]){border-color:var(--red)}
+.check{display:flex;gap:12px;align-items:flex-start;margin-bottom:22px}
+.check input{width:22px;height:22px;flex:0 0 22px;margin:2px 0 0;accent-color:var(--red)}
+.check label{font-size:14.5px;line-height:1.5;color:var(--muted)}
+.check a{color:var(--red);font-weight:600}
+.success{display:none;flex-direction:column;gap:14px;align-items:flex-start;padding:12px 0}
+.success.show{display:flex}
+.success .ok{width:56px;height:56px;border-radius:50%;background:var(--slate);display:flex;align-items:center;justify-content:center}
+.success .ok svg{width:28px;height:28px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.success h3{font-size:26px;line-height:1.2;color:var(--slate)}
+.success p{font-size:16.5px;color:var(--muted)}
+
+/* Footer */
+footer{background:var(--slate-dark);color:#C9D1D8;font-size:14px}
+footer .wrap{padding-top:28px;padding-bottom:28px;display:flex;flex-direction:column;gap:14px}
+footer nav{display:flex;gap:20px}
+footer a{text-decoration:underline}
+
+/* Tablet */
+@media (min-width:720px){
+  :root{--pad:32px}
+  .sec{padding-top:96px;padding-bottom:96px}
+  .hero-cta{flex-direction:row}
+  .hero-visual{height:380px;border-radius:190px 28px 28px 28px}
+  .certs{grid-template-columns:repeat(3,1fr)}
+  .certs-box{padding:32px}
+  .cards{grid-template-columns:1fr 1fr}
+  .job-actions{flex-direction:row}
+  .job-detail{grid-template-columns:1.3fr 1fr}
+  .job-detail .full{grid-column:1/-1}
+  .row{grid-template-columns:1fr 1fr}
+  .form-card{padding:34px}
+  footer .wrap{flex-direction:row;justify-content:space-between}
+}
+
+/* Desktop */
+@media (min-width:1024px){
+  .menu-btn{display:none}
+  .topbar{flex-wrap:wrap}
+  .nav{display:flex;align-items:center;gap:4px;margin-top:0;padding:6px;border-radius:999px}
+  .nav a{padding:8px 14px;border-radius:999px;font-size:15px}
+  .nav a.contact-link{border:1px solid rgba(255,255,255,.7);padding:7px 16px}
+  .hero::before{right:-160px;top:90px;width:620px;height:620px}
+  .hero::after{right:-40px;bottom:-240px;width:520px;height:520px}
+  .hero .wrap{padding-bottom:80px}
+  .hero-body{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;padding-top:80px}
+  .hero-visual{margin-top:0;height:460px;border-radius:220px 28px 28px 28px}
+  .about-grid{grid-template-columns:1fr 1.2fr;gap:64px}
+  .certs{grid-template-columns:repeat(6,1fr)}
+  .cards{grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{padding:28px}
+  .jobs-head{flex-direction:row;justify-content:space-between;align-items:flex-end}
+  .job-top{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;padding:28px}
+  .job-actions{margin-top:0;flex-direction:row}
+  .job summary{padding:0 28px}
+  .job-detail{padding:8px 28px 32px;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
+  .job-detail .full{grid-column:auto}
+  .contact-grid{grid-template-columns:1fr 1.2fr;gap:64px;align-items:start}
+  .form-card{padding:40px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero" id="top">
+<div class="wrap">
+  <div class="topbar">
+    <a class="brand" href="#top" aria-label="Impresa Bacchi, home">
+      <span class="brand-mark" aria-hidden="true">ib</span>
+      <span>impresa bacchi</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mainNav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      Menu
+    </button>
+    <nav class="nav" id="mainNav" aria-label="Principale">
+      <a href="#">Azienda</a>
+      <a href="#">Laboratorio</a>
+      <a href="#">Impianti</a>
+      <a href="#">Linea Cover</a>
+      <a href="#">Certificazioni</a>
+      <a href="#">Portfolio</a>
+      <a href="#top" aria-current="page">Lavora con noi</a>
+      <a href="#contatti" class="contact-link">Contatti</a>
+    </nav>
+  </div>
+
+  <div class="hero-body">
+    <div>
+      <p class="hero-kicker">Lavora con noi</p>
+      <h1>Costruiamo il territorio. Costruisci qui il tuo futuro.</h1>
+      <p class="hero-lead">Siamo un’impresa di costruzioni stradali e infrastrutture con una realtà solida alle spalle. Entra in una squadra che cresce e che investe nelle competenze delle persone.</p>
+      <div class="hero-cta">
+        <a class="btn btn-red-on-dark" href="#posizioni">Vedi le posizioni aperte</a>
+        <a class="btn btn-ghost-light" href="#contatti">Candidati ora</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>50+</b><span>anni di attività</span></div>
+        <div class="stat"><b>3</b><span>posizioni aperte</span></div>
+        <div class="stat"><b>Carpiano</b><span>sede di lavoro (MI)</span></div>
+      </div>
+    </div>
+    <!-- Sostituire con una foto reale (squadra in cantiere / stesa dell'asfalto) -->
+    <div class="ph hero-visual" role="img" aria-label="Segnaposto fotografico">
+      <small>Foto: squadra in cantiere / stesa dell’asfalto (da sostituire)</small>
+    </div>
+  </div>
+</div>
+</header>
+
+<main>
+
+<!-- CHI SIAMO -->
+<section id="chi-siamo" class="sec">
+<div class="wrap">
+  <div class="about-grid">
+    <div>
+      <div class="eyebrow">Chi siamo</div>
+      <h2 class="h2" style="color:var(--slate)">Progetti che migliorano la qualità della vita e del territorio.</h2>
+    </div>
+    <div>
+      <p class="about-lead">Impresa Bacchi opera nel settore delle costruzioni stradali e delle infrastrutture. Siamo impegnati nella realizzazione e nella gestione di opere pubbliche e private, con elevati standard qualitativi e tecnici.</p>
+      <p class="about-more">Dalla sede di Carpiano seguiamo l’intera filiera: cantieri, laboratorio accreditato per i materiali stradali e impianto di produzione di conglomerati bituminosi. Per questo cerchiamo persone con competenze diverse, che lavorino insieme con precisione e autonomia.</p>
+    </div>
+  </div>
+
+  <div class="certs-box">
+    <h3>Le nostre certificazioni</h3>
+    <ul class="certs">
+      <li class="cert"><b>ISO 30415:2021</b><span>Risorse Umane</span></li>
+      <li class="cert"><b>UNI/PdR 125:2022</b><span>Parità di Genere</span></li>
+      <li class="cert"><b>ISO 50001:2018</b><span>Energia</span></li>
+      <li class="cert"><b>ISO 14068-1:2023</b><span>Carbon Neutrality</span></li>
+      <li class="cert"><b>SOA</b><span>Del 9 novembre 2000</span></li>
+      <li class="cert"><b>Rating di Legalità</b><span>Del 22 gennaio 2024</span></li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<!-- COSA TI OFFRIAMO -->
+<section id="cosa-ti-offriamo" class="sec offer on-dark">
+<div class="wrap">
+  <div class="eyebrow">Cosa ti offriamo</div>
+  <h2 class="h2">Un lavoro stabile, in un ambiente che fa crescere le competenze.</h2>
+  <div class="cards">
+    <div class="card">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+      <h3>Una realtà solida e strutturata</h3>
+      <p>Entri in un’azienda con oltre 50 anni di attività.</p>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg>
+      <h3>Crescita professionale</h3>
+      <p>Opportunità di crescita all’interno dell’organizzazione.</p>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 20c0-2.5 1.8-4.5 4-4.5s3 1 3 2.5"/></svg>
+      <h3>Ambiente dinamico</h3>
+      <p>Un contesto orientato allo sviluppo delle competenze e al lavoro di squadra.</p>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 6.5A6.5 6.5 0 1 0 17 17.5M4 10h9M4 14h9"/></svg>
+      <h3>RAL commisurata all’esperienza</h3>
+      <p>Una retribuzione che riconosce l’esperienza maturata.</p>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+      <h3>Welfare aziendale</h3>
+      <p>Un pacchetto di welfare a disposizione di chi entra in squadra.</p>
+    </div>
+    <div class="card">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6zM9 11h6M9 15h6"/></svg>
+      <h3>Contratto a tempo indeterminato</h3>
+      <p>Tutte le posizioni aperte sono full-time, con sede a Carpiano (MI).</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- POSIZIONI APERTE -->
+<section id="posizioni" class="sec jobs">
+<div class="wrap">
+  <div class="jobs-head">
+    <div>
+      <div class="eyebrow">Posizioni aperte</div>
+      <h2 class="h2" style="color:var(--slate)">Chi stiamo cercando</h2>
+    </div>
+    <p class="jobs-count">3 posizioni · Carpiano (MI) · Full-time</p>
+  </div>
+
+  <div class="job-list">
+
+    <article class="job">
+      <div class="job-top">
+        <span class="tag">Contabilità lavori</span>
+        <h3>Contabile di Cantiere / Contabile Tecnico</h3>
+        <p class="job-sum">Contabilità lavori attiva e passiva dei cantieri stradali: SAL, computi metrici e controllo dei costi di commessa.</p>
+        <div class="chips"><span class="chip">Carpiano (MI)</span><span class="chip">Tempo indeterminato</span><span class="chip">Full-time</span></div>
+        <div class="job-actions"><a class="btn btn-red" href="#contatti" data-role="contabile">Candidati</a></div>
+      </div>
+      <details open>
+        <summary><span><span class="lbl-open">Vedi dettagli</span><span class="lbl-close">Chiudi dettagli</span></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="job-detail">
+          <div>
+            <h4>Principali responsabilità</h4>
+            <ul class="bul">
+              <li>Gestione della contabilità lavori attiva e passiva dei cantieri stradali</li>
+              <li>Redazione e aggiornamento dei SAL (Stati Avanzamento Lavori), misurazioni, computi metrici estimativi e consuntivazioni</li>
+              <li>Verifica e controllo dei costi di commessa, analisi dei consuntivi e degli scostamenti</li>
+              <li>Perizie di variante, stima dei prezzi unitari e analisi di prezzo</li>
+              <li>Interfaccia con fornitori, subappaltatori e Direzione Lavori</li>
+              <li>Elaborazione di reportistica tecnico-economica</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Requisiti richiesti</h4>
+            <ul class="bul dark">
+              <li>Esperienza minima di 5 anni come contabile tecnico o di cantiere nelle costruzioni stradali</li>
+              <li>Diploma di Geometra o Laurea in Ingegneria Civile / per le Infrastrutture</li>
+              <li>Esperienza con software gestionali e tecnici: Primus e CPM</li>
+              <li>Buona conoscenza di Excel e Autocad</li>
+              <li>Capacità di lettura e interpretazione di elaborati tecnici</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Completano il profilo</h4>
+            <div class="pills"><span class="pill">Precisione e attenzione ai dettagli</span><span class="pill">Gestione delle priorità</span><span class="pill">Lavoro in team</span><span class="pill">Problem solving e autonomia</span><span class="pill">Flessibilità e orientamento agli obiettivi</span></div>
+            <p class="note">RAL fino a € 40.000, commisurata all’esperienza maturata.</p>
+          </div>
+        </div>
+      </details>
+    </article>
+
+    <article class="job">
+      <div class="job-top">
+        <span class="tag">Qualità, Ambiente, Sicurezza</span>
+        <h3>Responsabile QHSE (Qualità, Ambiente e Sicurezza)</h3>
+        <p class="job-sum">Gestione del Sistema di Gestione Integrato e dei sistemi certificati aziendali, con sopralluoghi periodici nei cantieri.</p>
+        <div class="chips"><span class="chip">Carpiano (MI)</span><span class="chip">Tempo indeterminato</span><span class="chip">Full-time</span></div>
+        <div class="job-actions"><a class="btn btn-red" href="#contatti" data-role="qhse">Candidati</a></div>
+      </div>
+      <details>
+        <summary><span><span class="lbl-open">Vedi dettagli</span><span class="lbl-close">Chiudi dettagli</span></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="job-detail">
+          <div>
+            <h4>Principali responsabilità</h4>
+            <ul class="bul">
+              <li>Redazione e aggiornamento della documentazione del Sistema di Gestione Integrato su sicurezza e ambiente</li>
+              <li>Mantenimento dei sistemi certificati: ISO 9001, 14001, 45001, PdR 125, SA8000, ISO 39001, 37001 e 50001</li>
+              <li>Audit con gli enti certificatori e rapporti con le autorità competenti</li>
+              <li>Sopralluoghi periodici nei cantieri e confronto con i responsabili qualità e ambiente del cliente</li>
+              <li>Gestione delle non conformità, delle azioni correttive e delle azioni preventive</li>
+              <li>Collaborazione con ufficio tecnico, responsabili di cantiere e Direzione Tecnica</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Requisiti richiesti</h4>
+            <ul class="bul dark">
+              <li>Diploma di Geometra o Laurea in Ingegneria Civile o Architettura (o titolo equipollente)</li>
+              <li>Esperienza comprovata nel ruolo superiore a 5 anni</li>
+              <li>Conoscenza della normativa di riferimento</li>
+              <li>Preferibile esperienza nel settore delle costruzioni e delle infrastrutture</li>
+              <li>Buona conoscenza di Office e Autocad</li>
+              <li>Disponibilità a spostamenti giornalieri sui cantieri</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Completano il profilo</h4>
+            <div class="pills"><span class="pill">Precisione e attenzione ai dettagli</span><span class="pill">Gestione delle priorità</span><span class="pill">Lavoro in team</span><span class="pill">Problem solving e autonomia</span><span class="pill">Flessibilità e orientamento agli obiettivi</span></div>
+            <p class="note">RAL commisurata all’esperienza maturata.</p>
+          </div>
+        </div>
+      </details>
+    </article>
+
+    <article class="job">
+      <div class="job-top">
+        <span class="tag">Laboratorio e R&amp;S</span>
+        <h3>Responsabile di Laboratorio Accreditato</h3>
+        <p class="job-sum">Materiali stradali, marcatura CE, ricerca e sviluppo. Prove nel laboratorio accreditato ISO IEC 17025 e assistenza tecnica alla produzione.</p>
+        <div class="chips"><span class="chip">Carpiano (MI)</span><span class="chip">Tempo indeterminato</span><span class="chip">Full-time</span></div>
+        <div class="job-actions"><a class="btn btn-red" href="#contatti" data-role="lab">Candidati</a></div>
+      </div>
+      <details>
+        <summary><span><span class="lbl-open">Vedi dettagli</span><span class="lbl-close">Chiudi dettagli</span></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="job-detail">
+          <div>
+            <h4>Principali responsabilità</h4>
+            <ul class="bul">
+              <li>Prove di laboratorio su materiali in ingresso e in uscita, secondo normative nazionali e internazionali</li>
+              <li>Sperimentazione di nuovi materiali e applicazioni in vera grandezza</li>
+              <li>Elaborazione dei dati e compilazione dei rapporti di prova</li>
+              <li>Studi di fattibilità e qualifica dei materiali: miscele bituminose, legate e non legate</li>
+              <li>Assistenza tecnica alla produzione di conglomerati bituminosi, ricette e marcatura CE</li>
+              <li>Gestione del sistema ACCREDIA, dell’incertezza di prova e degli strumenti di misura</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Requisiti richiesti</h4>
+            <ul class="bul dark">
+              <li>Diploma o Laurea in settore tecnico</li>
+              <li>Esperienza minima di 3 anni in posizione simile</li>
+              <li>Gestione di software specifici per test di laboratorio</li>
+              <li>Buona conoscenza di Office (Excel, Word)</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Completano il profilo</h4>
+            <div class="pills"><span class="pill">Autonomia di esecuzione</span><span class="pill">Pianificazione e monitoraggio delle attività</span><span class="pill">Conoscenza tecnica di produzione e posa dei conglomerati bituminosi</span><span class="pill">Lavoro in team</span><span class="pill">Problem solving</span></div>
+            <p class="note">Laboratorio di proprietà a Carpiano, con attività in cantiere (prove in sito).</p>
+          </div>
+        </div>
+      </details>
+    </article>
+
+  </div>
+
+  <p class="legal">Gli annunci sono rivolti ad entrambi i sessi, ai sensi delle leggi 903/77 e 125/91, e a persone di tutte le età e tutte le nazionalità, ai sensi dei decreti legislativi 215/03 e 216/03.</p>
+</div>
+</section>
+
+<!-- MODULO DI CONTATTO -->
+<section id="contatti" class="sec contact on-dark">
+<div class="wrap">
+  <div class="contact-grid">
+    <div>
+      <div class="eyebrow">Modulo di contatto</div>
+      <h2 class="h2">Candidati e raccontaci chi sei.</h2>
+      <p class="contact-lead">Scegli la posizione che ti interessa e allega il tuo CV. Non trovi il profilo giusto? Invia una candidatura spontanea.</p>
+      <div class="contact-addr"><b>Sede di lavoro</b>Carpiano (MI)</div>
+    </div>
+
+    <div class="form-card">
+      <!-- TODO sviluppo: collegare action/method al backend (o a un servizio di form) e aggiungere un controllo antispam. -->
+      <form id="applyForm" action="#" method="post" enctype="multipart/form-data" novalidate>
+        <div class="row">
+          <div class="field"><label for="nome">Nome</label><input id="nome" name="nome" type="text" autocomplete="given-name" required></div>
+          <div class="field"><label for="cognome">Cognome</label><input id="cognome" name="cognome" type="text" autocomplete="family-name" required></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" inputmode="email" required></div>
+          <div class="field"><label for="tel">Telefono</label><input id="tel" name="telefono" type="tel" autocomplete="tel" inputmode="tel"></div>
+        </div>
+        <div class="field">
+          <label for="posizione">Posizione di interesse</label>
+          <select id="posizione" name="posizione" required>
+            <option value="">Seleziona una posizione</option>
+            <option value="contabile">Contabile di Cantiere / Contabile Tecnico</option>
+            <option value="qhse">Responsabile QHSE</option>
+            <option value="lab">Responsabile di Laboratorio Accreditato</option>
+            <option value="spontanea">Candidatura spontanea</option>
+          </select>
+        </div>
+        <div class="field"><label for="messaggio">Messaggio (facoltativo)</label><textarea id="messaggio" name="messaggio" rows="4"></textarea></div>
+        <div class="field"><label for="cv">Curriculum vitae (PDF)</label><input id="cv" name="cv" type="file" accept=".pdf,.doc,.docx"></div>
+        <div class="check">
+          <input id="privacy" name="privacy" type="checkbox" required>
+          <label for="privacy">Ho letto l’<a href="#">informativa sul trattamento dei dati personali</a> e acconsento al trattamento dei miei dati per la selezione del personale.</label>
+        </div>
+        <p id="formError" role="alert" style="display:none;margin:0 0 16px;color:var(--red);font-weight:600;font-size:15px">Compila i campi obbligatori e accetta l’informativa per inviare la candidatura.</p>
+        <button class="btn btn-red btn-block" type="submit" style="min-height:54px;font-size:17px;font-weight:700">Invia candidatura</button>
+      </form>
+
+      <div class="success" id="success" role="status" aria-live="polite">
+        <div class="ok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+        <h3>Grazie, abbiamo ricevuto la tua candidatura.</h3>
+        <p>Valuteremo il tuo profilo e ti contatteremo se in linea con la posizione.</p>
+        <button class="btn btn-ghost-dark" type="button" id="resetForm">Invia un’altra candidatura</button>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="wrap">
+  <div>© 2026 Impresa Bacchi · Costruzioni generali · Carpiano (MI)</div>
+  <nav aria-label="Footer"><a href="#">Privacy</a><a href="#">Certificazioni</a></nav>
+</div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn');
+  var nav=document.getElementById('mainNav');
+  btn.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open?'true':'false');
+  });
+  nav.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');}
+  });
+
+  var select=document.getElementById('posizione');
+  document.querySelectorAll('[data-role]').forEach(function(a){
+    a.addEventListener('click',function(){select.value=a.getAttribute('data-role');});
+  });
+
+  var form=document.getElementById('applyForm');
+  var success=document.getElementById('success');
+  var error=document.getElementById('formError');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!form.checkValidity()){
+      error.style.display='block';
+      var first=form.querySelector(':invalid');
+      if(first){first.focus();}
+      return;
+    }
+    error.style.display='none';
+    /* Anteprima: qui va l'invio reale (fetch verso il backend). */
+    form.style.display='none';
+    success.classList.add('show');
+  });
+  document.getElementById('resetForm').addEventListener('click',function(){
+    form.reset();
+    success.classList.remove('show');
+    form.style.display='';
+  });
+})();
+</script>
+</body>
+</html>
